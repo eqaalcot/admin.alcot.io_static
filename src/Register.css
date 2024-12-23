@@ -1,0 +1,81 @@
+/* Container to center the card */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .register-card {
+    background-color: #f5f6f8;
+    padding: 50px; 
+    border-radius: 15px; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 450px; 
+  }
+  
+  h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.2em;
+  }
+  
+  /* Input fields */
+  .register-input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.2em;
+    box-sizing: border-box;
+  }
+  
+  .register-input:focus {
+    outline: none;
+    border-color: #4CAF50; 
+  }
+  
+  .error-message {
+    color: red; /* Make the text red */
+    font-size: 1em; /* Adjust the size if needed */
+    margin-top: 10px; /* Add some spacing */
+  }
+
+  /* REGISTER button */
+  .register-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    margin: 20px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #388E3C; 
+  }
+  
+  /* Login link */
+  .login-link {
+    margin-top: 20px;
+    color: #555;
+    font-size: 1em;
+  }
+  
+  .login-link a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+  }
+  
+  .login-link a:hover {
+    text-decoration: underline;
+  }
+  

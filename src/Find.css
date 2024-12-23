@@ -1,0 +1,72 @@
+/* Container to center the card */
+.find-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Card styling */
+  .find-card {
+    background-color: #f5f6f8;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 600px;
+  }
+  
+  /* Label styling */
+  .find-label {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Input field styling */
+  .find-input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.2em;
+  }
+  
+  /* Find button styling */
+  .find-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .find-button:hover {
+    background-color: #388E3C; /* Darker green */
+  }
+  
+  /* Error message styling */
+  .error-message {
+    color: red;
+    margin-top: 15px;
+    font-size: 0.9em;
+  }
+  
+  /* User info styling */
+  .user-info {
+    margin-top: 15px;
+    text-align: left;
+  }
+  
+  .user-info p {
+    margin: 5px 0;
+    color: #333;
+  }
+  

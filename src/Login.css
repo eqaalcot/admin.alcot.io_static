@@ -1,0 +1,75 @@
+/* Container to center the card */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-card {
+    background-color: #f5f6f8;
+    padding: 50px; /* Increase padding for larger box */
+    border-radius: 15px; /* Slightly more rounded corners */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 450px; /* Increase width */
+  }
+  
+  h2 {
+    margin-bottom: 30px; 
+    color: #333;
+    font-size: 2.2em; 
+  }
+  
+  /* Input fields */
+  .login-input {
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0; 
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    font-size: 1.2em; 
+    box-sizing: border-box;
+  }
+  
+  .login-input:focus {
+    outline: none;
+    border-color: #4CAF50; 
+  }
+  
+  /* LOGIN button */
+  .login-button {
+    background-color: #4CAF50; 
+    color: white;
+    border: none;
+    padding: 15px; 
+    font-size: 1.2em; 
+    cursor: pointer;
+    border-radius: 8px;
+    width: 100%;
+    margin: 20px 0;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #388E3C; /* Darker green on hover */
+  }
+  
+  /* Signup link */
+  .signup-link {
+    margin-top: 20px;
+    color: #555;
+    font-size: 1em; 
+  }
+  
+  .signup-link a {
+    color: #4CAF50; /* Green link color */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em; 
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  

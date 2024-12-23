@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-layout {
+    display: flex;
+    height: 100vh; /* Make the container take full height */
+}
+  
+.navbar {
+    width: 300px; 
+    background-color: #4CAF50; 
+    color: white;
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar h1 {
+    font-size: 3em; /* "My App"'s font size */
+    margin-bottom: 30px; /* Add space below the title */
+}
+  
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+  
+.navbar li {
+    margin: 25px 0; /* Increase space between tabs */
+}
+  
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.7em; 
+    display: block; /* Ensures full-width hover area */
+    padding: 10px; 
+    border-radius: 3px; /* Rounded corners */
+}
+  
+.navbar a:hover {
+    background-color: #388E3C; /* Darker color when hover */
+    transition: background-color 0.5s ease; /* Smooth transition */
+}
+  
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
