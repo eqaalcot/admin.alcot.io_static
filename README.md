@@ -68,3 +68,30 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+# Build Log
+## Version History
+### v0.1.1
+Release Date: 12/28/2024 <br>
+<ins> Changes: </ins>
+1. Navbar Updates:
+    - Removed the Delete, Search, and Register buttons from the navbar.
+    - Integrated these functionalities into the Accounts page (previously named All).
+    - Renamed the All navbar link to Accounts for clarity.
+      
+2. Context Menu Integration:
+   - Added right-click functionality to the table rows in the Accounts page.
+   - Context menu includes the following actions:
+     1. Lock
+     2. Unlock
+     3. Change Password
+     4. Delete
+
+3. Improved Table Indexing:
+   - Replaced backend IDs with continuous numeric indices in the Accounts table.
+   - Ensures sequential numbering for better user experience.
+
+
