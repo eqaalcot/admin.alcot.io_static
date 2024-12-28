@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Register.css";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 /* Goal:
 负责收集用户名、密码和角色 (user/admin)，
 发送一个POST请求到后端的 /register 接口。
@@ -13,7 +14,7 @@ const Register = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState("");
-
+    const navigate = useNavigate();
     // Validate username based on role
     const validateUsername = () => {
         if (role === "ADMIN") {
@@ -45,7 +46,7 @@ const Register = () => {
         } else {
             // 如果验证通过，清空错误信息
             setErrorMessage("");
-        
+            
             // 准备要发送到后端的数据
             const data = { role, username, password };
         
@@ -64,7 +65,7 @@ const Register = () => {
                     const result = await response.json(); // 将后端返回的数据转换为 JavaScript 对象
                     console.log("Registration Succeed:", result); // 在控制台输出成功信息
                     alert("Registration Succeed!"); // 弹出成功提示
-                    console.log(`cookie is ${document.cookie}`);
+                    navigate("/home/all");
                 } else {
                     setErrorMessage(`Registration failed. Response's status code error(Status: ${response.status}).`);
                 }

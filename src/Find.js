@@ -15,15 +15,17 @@ const Find = () => {
 
         try {
             // 向后端发送POST请求到/find接口，传递用户名数据
-            const response = await fetch("http://backend-server/find", {
+            const response = await fetch("https://admin.alcot.io:8443/api/account/find", {
                 method: "POST", 
                 headers: { "Content-Type": "application/json" }, 
                 body: JSON.stringify({ username }), 
+                credentials: 'include',
             });
         
             // 检查响应状态码是否ok
             if (response.ok) {
                 const data = await response.json(); // 将返回的JSON数据转换为JS对象
+                console.log(data)
                 setUserInfo(data); // 将返回的用户信息保存到状态中
                 setErrorMessage(""); // 如果之前有错误信息，清除这些信息
             } else {
@@ -58,12 +60,16 @@ const Find = () => {
             </form>
 
             {/* Display user info if found */}
-            {userInfo && (
-            <div className="user-info">
-                <p><strong>Username:</strong> {userInfo.username}</p>
-                <p><strong>Password:</strong> {userInfo.password}</p>
-                <p><strong>Role:</strong> {userInfo.role}</p>
-            </div>
+            {userInfo && userInfo.acc && (
+                <div className="user-info">
+                    <p><strong>Username:</strong> {userInfo.acc.username}</p>
+                    <p><strong>Role:</strong> {userInfo.acc.role}</p>
+                    <p><strong>Attempts:</strong> {userInfo.attempts}</p>
+                    <p>
+                        <strong>Locked Until:</strong>{" "}
+                        {new Date(userInfo.locked_until).toLocaleString()} {/* Transform time to local timezone */}
+                    </p>
+                </div>
             )}
 
             {/* Display error message if no user found */}

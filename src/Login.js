@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+
+import { AntDesignOutlined } from '@ant-design/icons';
+import { Button, ConfigProvider, Space } from 'antd';
+import { createStyles } from 'antd-style';
+
+
 /*Goal:
 负责收集用户名和密码， 
 发送一个POST请求到后端的/login接口。
@@ -43,10 +49,6 @@ const Login = () => {
                 console.log("Login successful:", result); // 在控制台输出登录成功信息
                 setErrorMessage(""); // 清空错误信息
                 alert("Login successful!"); // 弹出登录成功提示
-                // Print all response headers
-                //console.log(`cookie is ${document.cookie}`);
-                //console.log(`set-cookie is ${response.headers.get('set-cookie')}`);
-
                 navigate("/home"); // 跳转到主页面
             } else {
                 setErrorMessage(`Login failed. Response's status code error(Status: ${response.status}).`); 
@@ -67,7 +69,7 @@ const Login = () => {
         <div className="login-container">
             <div className="login-card">
                 <h2>Sign in</h2>
-                <form onSubmit={handleSubmit}>
+                <form>
                     <input
                         type="text"
                         placeholder="Username"
@@ -82,10 +84,13 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)} // 保存输入的密码
                     />
-                    <button type="submit" className="login-button">LOGIN</button>
+                    {/* <button type="submit" className="login-button">LOGIN</button> */}
+                    <Button type="primary" className="login-button" size="large" icon={<AntDesignOutlined />} onClick={handleSubmit}>
+                        LOGIN
+                    </Button>
                 </form>
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
-
+                
                 {/* <p className="signup-link">
                     Don't have an account? <Link to="/register">Sign up</Link> 
                 </p> */}

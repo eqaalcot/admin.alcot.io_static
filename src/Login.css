@@ -73,3 +73,22 @@
     text-decoration: underline;
   }
   
+/* Replace 'your-prefix' with the actual value of prefixCls */
+.login-button:not([disabled]):not(.your-prefix-btn-dangerous) > span {
+    position: relative;
+  }
+  
+  .login-button:not([disabled]):not(.your-prefix-btn-dangerous)::before {
+    content: '';
+    background: linear-gradient(135deg, #6253e1, #04befe);
+    position: absolute;
+    inset: -1px;
+    opacity: 1;
+    transition: all 0.3s;
+    border-radius: inherit;
+  }
+  
+  .login-button:not([disabled]):not(.your-prefix-btn-dangerous):hover::before {
+    opacity: 0;
+  }
+  
